@@ -24,3 +24,5 @@ appConfig.js
 yarn.lock
 package-lock.json
 webchat-appConfig.js
+
+.vscode/
