@@ -1,4 +1,4 @@
-# Twilio Flex Web Chat UI Sample
+# Twilio Flex Web Chat UI
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -12,27 +12,28 @@ This package can only be consumed together with Twilio Flex. Visit http://twilio
 ```
 npm install
 ```
+
 2. Copy webchat-appConfig.sample.js in public/assets folder and configure accordingly to use your Twilio account
 ```
 cp public/assets/webchat-appConfig.sample.js public/assets/webchat-appConfig.js
 ```
+
 3. Start Flex UI by running:
 ```
 npm start
 ```
+
 # Consumption
 
-There are 2 ways to consume Flex WebChat: from CDN or npm. 
+There are 2 ways to consume Flex WebChat, from CDN or npm. 
 
-For CDN there are two options:
+For CDN there are 2 options:
 
 1. Add the following script tag to the index.html head tag to include WebChat bundle from CDN.
-
 ```
 <script src="https://assets.flex.twilio.com/releases/flex-webchat-ui/2.8.1/twilio-flex-webchat.min.js" integrity="sha512-KzpB56iRohSbDOkfM/V0PTp9DGHMno2EJJx6Zg8Ul3byOV3xtAurIZ+NibcO+cc0SEDvodI/5SKMSv2p+gwSYw==" crossorigin></script>
 ```
 Then add the following script tag to the index.html body tag to initialize WebChat.
-
 ```
  <script>
     const appConfig = {
@@ -44,7 +45,6 @@ Then add the following script tag to the index.html body tag to initialize WebCh
 ```
 
 2. The following steps will allow you to customize the FlexWebChat initialization flow before you render the WebChat, as it consists of two parts: initialize and render. This option allows you to tap into customization before the render method executes.
-   
 ```
 Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     const { manager } = webchat;
@@ -67,6 +67,8 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     webchat.init();
   });
 ```
+
+# Links
 
 For more information, please visit: 
 - https://www.twilio.com/docs/flex/developer/webchat/setup
